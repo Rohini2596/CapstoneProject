@@ -1,0 +1,139 @@
+.auth-container {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  /* For smaller screens stack vertically */
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
+}
+
+/* Left section */
+.auth-left {
+  flex: 1;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  text-align: center;
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .description {
+    font-size: 1.1rem;
+    max-width: 400px;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+
+  img {
+    width: 300px;
+    max-width: 80%;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  @media (max-width: 900px) {
+    padding: 2rem;
+    h1 {
+      font-size: 2.5rem;
+    }
+    .description {
+      max-width: 100%;
+    }
+    img {
+      width: 200px;
+    }
+  }
+}
+
+/* Right section (login form) */
+.auth-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f7f7f7;
+  padding: 3rem;
+
+  .auth-box {
+    background: #ffffff;
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 380px;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  @media (max-width: 900px) {
+    padding: 2rem;
+  }
+}
+
+/* Common styles (inputs, buttons, footer) */
+.form-group {
+  margin-bottom: 1.2rem;
+
+  input {
+    width: 100%;
+    padding: 0.7rem 0.9rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 0.95rem;
+    outline: none;
+    transition: all 0.3s ease;
+
+    &:focus {
+      border-color: #667eea;
+      box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15);
+    }
+  }
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.6rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  background: #667eea;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+
+  &:hover:not(:disabled) {
+    background: #5a6fdc;
+    transform: translateY(-1px);
+  }
+
+  &:disabled {
+    background: #b5bdf3;
+    cursor: not-allowed;
+  }
+}
+
+.footer-text {
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  color: #555;
+
+  a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 500;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
